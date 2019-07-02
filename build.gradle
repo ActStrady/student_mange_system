@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+    id 'net.ltgt.apt' version '0.10' apply true
+}
+
+group 'com.eos'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile group: 'jfree', name: 'jfreechart', version: '1.0.2'
+    compile group: 'jfree', name: 'jcommon', version: '1.0.0'
+    compile group: 'mysql', name: 'mysql-connector-java', version: '5.1.9'
+    compile group: 'org.slf4j', name: 'slf4j-api', version: '1.7.25'
+    compile group: 'ch.qos.logback', name: 'logback-core', version: '1.2.3'
+    compile group: 'ch.qos.logback', name: 'logback-classic', version: '1.2.3'
+    compileOnly 'org.projectlombok:lombok:1.18.4'
+    apt 'org.projectlombok:lombok:1.18.4'
+}
